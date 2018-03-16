@@ -1,0 +1,40 @@
+const buffer64 = require("..");
+
+// an array of this size represent the recording of a sensor for
+// 1h at 200Hz
+var size = 200 * 60 * 60 * 1;
+//var size = 10;
+
+// encoding
+var arr = new Float32Array( size )
+for(var i=0; i<size; i++){
+  arr[i] = Math.random();
+}
+
+console.time("encoding")
+var b64 = buffer64.typedArrayToBase64( arr );
+console.timeEnd("encoding")
+console.time("decoding")
+var arrBis = buffer64.base64ToTypedArray( b64.data, b64.type );
+console.timeEnd("decoding")
+
+console.log( "Same arrays? " + areSameArray(arr, arrBis) );
+
+
+// Returns true if the 2 arrays contain the same data
+function areSameArray( arr1, arr2 ){
+  var eps = 1e-6;
+  if( arr1.length !== arr2.length ){
+    console.log("Length are not identical.");
+    return false;
+  }
+
+  for(var i=0; i<arr1.length; i++){
+    if(Math.abs(arr1[i] - arr2[i]) > eps){
+      console.log("Arrays are different.");
+      return false;
+    }
+  }
+
+  return true;
+}

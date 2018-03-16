@@ -1,0 +1,38 @@
+{
+  "name": "buffer64",
+  "version": "0.1.0",
+  "description": "A starting point to create ES6 module for browser",
+  "repository": "jonathanlurie/buffer64",
+  "moduleName": "buffer64",
+  "entry": "src/main.js",
+  "main": "dist/buffer64.cjs.js",
+  "commonjs": "dist/buffer64.cjs.js",
+  "module": "dist/buffer64.module.js",
+  "browser": "dist/buffer64.umd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "serve . & rollup -w -c rollup.config.dev.js",
+    "dochtml": "documentation build src/** -f html -o ./doc/",
+    "doc": "documentation build src/** -f md > documentation.md"
+  },
+  "author": "Jonathan Lurie",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "documentation": "^6.1.0",
+    "google-closure-compiler-js": "^20170218.0.0",
+    "rollup": "^0.57.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.2.0",
+    "rollup-plugin-node-resolve": "^3.2.0",
+    "serve": "^6.5.3"
+  },
+  "dependencies": {
+    "js-base64": "^2.4.3"
+  }
+}
