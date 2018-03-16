@@ -1,9 +1,3 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.buff64 = {})));
-}(this, (function (exports) { 'use strict';
-
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 function createCommonjsModule(fn, module) {
@@ -2297,10 +2291,4 @@ function base64ToTypedArray(b64Str) {
   return new jsArrayConstructor(arr.buffer);
 }
 
-exports.typedArrayToBase64 = typedArrayToBase64;
-exports.base64ToTypedArray = base64ToTypedArray;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
-//# sourceMappingURL=buff64.umd.js.map
+export { typedArrayToBase64, base64ToTypedArray };

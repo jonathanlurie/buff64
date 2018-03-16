@@ -1,4 +1,4 @@
-const buffer64 = require("..");
+const buff64 = require("..");
 
 // an array of this size represent the recording of a sensor for
 // 1h at 200Hz
@@ -12,10 +12,10 @@ for(var i=0; i<size; i++){
 }
 
 console.time("encoding")
-var b64 = buffer64.typedArrayToBase64( arr );
+var b64 = buff64.typedArrayToBase64( arr );
 console.timeEnd("encoding")
 console.time("decoding")
-var arrBis = buffer64.base64ToTypedArray( b64.data, b64.type );
+var arrBis = buff64.base64ToTypedArray( b64.data, b64.type );
 console.timeEnd("decoding")
 
 console.log( "Same arrays? " + areSameArray(arr, arrBis) );

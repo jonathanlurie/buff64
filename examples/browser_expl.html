@@ -4,10 +4,10 @@
 </head>
 <body>
   <!-- importing the automatically build module -->
-  <script src="../dist/buffer64.umd.js"></script>
+  <script src="../dist/buff64.umd.js"></script>
 
   <!-- The minified version is also accessible -->
-  <!-- <script src="../dist/buffer64.umd.min.js"></script> -->
+  <!-- <script src="../dist/buff64.umd.min.js"></script> -->
 
   <p>Open Javascript console.</p>
 
@@ -25,11 +25,11 @@
     }
 
     console.time("encoding")
-    var b64 = buffer64.typedArrayToBase64( arr );
+    var b64 = buff64.typedArrayToBase64( arr );
     console.timeEnd("encoding")
 
     console.time("decoding")
-    var arrBis = buffer64.base64ToTypedArray( b64.data, b64.type );
+    var arrBis = buff64.base64ToTypedArray( b64.data, b64.type );
     console.timeEnd("decoding")
 
     console.log( "Same arrays? " + areSameArray(arr, arrBis) );
