@@ -1,7 +1,7 @@
 {
   "name": "buff64",
   "version": "0.1.1",
-  "description": "A starting point to create ES6 module for browser",
+  "description": "A typed array to base64 codec for Node and Browsers",
   "repository": "jonathanlurie/buff64",
   "moduleName": "buff64",
   "entry": "src/main.js",
