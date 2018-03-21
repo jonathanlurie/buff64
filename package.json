@@ -7,7 +7,7 @@
   "entry": "src/main.js",
   "main": "dist/buff64.cjs.js",
   "commonjs": "dist/buff64.cjs.js",
-  "module": "dist/buff64.module.js",
+  
   "browser": "dist/buff64.umd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

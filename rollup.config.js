@@ -50,28 +50,7 @@ export default [
         presets: [ 'es2015-rollup' ]
       })
     ]
-  },
-
-
-  {
-    input: pkg.entry,
-    output: {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: false,
-    },
-    plugins: [
-      resolve(), // so Rollup can find `ms`
-      commonjs({ include: 'node_modules/**' }), // so Rollup can convert other modules to ES module
-      globals(),
-      builtins(),
-      babel({
-        exclude: 'node_modules/**',
-        babelrc: false,
-        presets: [ 'es2015-rollup' ]
-      })
-    ]
-  },
+  }
 
 
 ];
